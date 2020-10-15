@@ -1,0 +1,46 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-mobile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-items {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    display: none;
+}
+
+@media (min-width:992px) {
+    nav {
+        display: flex;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    button {
+        display: block;
+    }
+}
