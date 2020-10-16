@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Helvetice Neue LT Std 45 Light";
+    src: url("font/HelveticaNeueLTStd45Light_22520.woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background: linear-gradient(to top, rgb(117, 82, 246) 35%, rgb(241, 241, 241) 90%);
+    min-height: 100vh;
+    font-family: "Helvetice Neue LT Std 45 Light";
+}
+
 .nav-mobile {
     display: flex;
     justify-content: space-between;
@@ -11,6 +24,8 @@
 
 .nav-items {
     display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 ul {
@@ -27,9 +42,10 @@ button {
     display: none;
 }
 
-@media (min-width:992px) {
+@media (min-width:1024px) {
     nav {
         display: flex;
+        padding: 2rem 4rem;
     }
 
     .icon {
@@ -40,7 +56,34 @@ button {
         display: flex;
     }
 
+    ul li {
+        margin-right: 3rem;
+    }
+
+    li a:hover {
+        color:rgb(117, 82, 246);
+    }
+
     button {
         display: block;
+        border: 1px solid #7552f6;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        background: transparent;
     }
+
+    button a {
+        color: #7552f6;
+        font-size: .7rem;
+    }
+
+    button:hover {
+        background: #7552f6;
+    }
+
+    button:hover a {
+        color: #fff;
+    }
+
+    
 }
