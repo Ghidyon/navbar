@@ -17,9 +17,9 @@ body {
     font-family: "Helvetice Neue LT Std 45 Light";
 }
 
-.nav-mobile {
+nav {
     display: flex;
-    justify-content: space-between;
+    padding: 2rem 4rem;
 }
 
 .nav-items {
@@ -30,7 +30,43 @@ body {
 
 ul {
     list-style: none;
-    display: none;
+    display: flex;
+}
+
+ul li {
+    margin-right: 3rem;
+}
+
+li a {
+    transition: all .3s ease;
+}
+
+li a:hover {
+    color:rgb(117, 82, 246);
+}
+
+.btn {
+    display: block;
+    border: 2px solid #7552f6;
+    padding: .6rem 1.2rem;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn a {
+    color: #7552f6;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #7552f6;
+}
+
+.btn:hover a {
+    color: #fff;
 }
 
 a {
@@ -38,52 +74,53 @@ a {
     color: black;
 }
 
-button {
+.icon {
     display: none;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    background-color: #7552f6; 
 }
 
-@media (min-width:1024px) {
+.bar {
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%) rotate(0deg);
+    background: #000000;
+    transition: all .2s ease;
+}
+
+.bar:first-child {
+    top: 35%;
+}
+
+.bar:last-child {
+    top: 60%;
+}
+
+@media screen and (max-width: 1024px) {
     nav {
-        display: flex;
-        padding: 2rem 4rem;
+        padding: 2rem;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .icon {
+    .nav-items {
         display: none;
     }
-
-    ul {
+    .nav-mobile {
         display: flex;
+        justify-content: space-between;
     }
-
-    ul li {
-        margin-right: 3rem;
-    }
-
-    li a:hover {
-        color:rgb(117, 82, 246);
-    }
-
-    button {
-        display: block;
-        border: 1px solid #7552f6;
-        padding: .5rem 1rem;
-        border-radius: 5px;
-        background: transparent;
-    }
-
-    button a {
-        color: #7552f6;
-        font-size: .7rem;
-    }
-
-    button:hover {
-        background: #7552f6;
-    }
-
-    button:hover a {
-        color: #fff;
-    }
-
     
+    .icon {
+        display: block;               
+    }
+
 }
