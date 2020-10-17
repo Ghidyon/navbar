@@ -11,6 +11,11 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Playfair Display';
+    src: url(font/PlayfairDisplay-Regular.ttf);
+}
+
 body {
     background: linear-gradient(to top, rgb(117, 82, 246) 35%, rgb(241, 241, 241) 90%);
     min-height: 100vh;
@@ -42,7 +47,7 @@ li a {
 }
 
 li a:hover {
-    color:rgb(117, 82, 246);
+    color: rgb(117, 82, 246);
 }
 
 .btn {
@@ -83,7 +88,7 @@ a {
     cursor: pointer;
     position: relative;
     outline: none;
-    background-color: #7552f6; 
+    background-color: transparent;
 }
 
 .bar {
@@ -109,18 +114,39 @@ a {
         padding: 2rem;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .nav-items {
-        display: none;
-    }
-    .nav-mobile {
-        display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
     }
     
     .icon {
         display: block;               
     }
-
+    
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem;
+        background: #fff;
+        background-image: url(images/mine-menu-garnish.jpg);
+        background-repeat: no-repeat;
+        background-position: 100% 23%;
+        background-size: 50%;
+    }
+    
+    ul {
+        flex-direction: column;
+    }
+    
+    .btn {
+        align-self: center;
+    } 
+    
+    li {
+      margin-bottom: 1rem;
+    }
+    li a {
+        font-family: 'Playfair Display';
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
 }
